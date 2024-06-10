@@ -1,0 +1,75 @@
+<html>
+<head>
+<title>UI Pages</title>
+<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    </head>
+    <style>
+    body{
+        background-image: url("loginstudentandadmin1.jpg");
+    }
+    .glass-card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+}
+
+.glass-card h2 {
+    margin-bottom: 20px;
+    color:black;
+    font-size: x-large;
+}
+h1{
+    font-size: xx-large;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-decoration: underline;
+}
+h2{
+    color: black;
+}
+    </style>
+    <script>
+    function loginValidation() {
+    var pass1 = document.myform.password.value;
+    var pass2 = document.myform.confirmpassword.value;
+            if(pass1!=pass2) {
+              alert("Password Must match with conform Password")
+              return false;  
+           }
+           else if(pass1=="" || pass1==null){
+            alert("Please enter the password")
+            return false;
+           }
+           return true                 
+        }           
+     </script>
+    <body>
+        <br><br><br><br>
+        <center>
+        <div class="glass-card">
+            <form name="myform" action="LoginPagestudent.html" onsubmit="return loginValidation(this)">
+                <h1>Password</h1>
+        <div class="input-group">
+            <div  class="input-group">
+                <h2>Enter Password</h2>
+                <input  id="password" type="password" class="form-control" name="password" placeholder="Password"><br>
+                <h2>Confirm Password</h2>
+                <input  id="confirmpassword" type="password" class="form-control" name="confirmpassword" placeholder="Confirm Password"><br>
+        </div>
+        </div>
+        <br>
+<input type="submit" value="Submit"><br>
+</div>
+</form>
+</center>
+    </body>
+    </html>

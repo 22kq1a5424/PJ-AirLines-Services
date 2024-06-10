@@ -1,0 +1,167 @@
+
+<html>
+<head>
+<title>UI Pages</title>
+
+<style>
+    
+    body{
+        background-image: url("loginimage.jpg");
+    }
+    nav{
+
+            color: white;
+            padding: 5px;
+            border-radius: 5px;
+            display: flex;
+            font-size: large;
+            justify-content: center;
+             padding-right: 40%;
+             align-items: center;
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+           
+        }
+        nav ul li a:hover {
+            text-decoration: underline;
+            color: white;
+        }
+     h1{
+                text-align: center;
+                font-family: Georgia, 'Times New Roman', Times, serif;
+                font-size:xx-large;
+                color: white;
+                text-decoration: underline;
+             }
+    h2{
+        text-align: center;
+        color: white;
+       font-family: Georgia, 'Times New Roman', Times, serif;
+                font-size:x-large;
+    }
+    nav {
+        color: white;
+        padding: 30px;
+    }
+    nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+    nav ul li {
+        display: inline;
+        margin-right: 10px;
+    }
+    nav ul li a {
+        color: white;
+        text-decoration: none;
+    }
+    nav ul li a:hover {
+        text-decoration:underline;
+    }
+    .profile{
+    flex: 1;
+            margin-left: 5px;
+            padding-right: 20%;
+            text-align: center;
+            align-items: center;
+            font-weight: bold;
+  }
+  .profile img{
+            width: 50px;
+            height:50px
+            margin-left: 75%;
+            align-items: center;
+        }
+        .profile-container {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+    }
+    .profile-image {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+    .dropdown-menu {
+        display: none;
+        position: relative;
+        top: 60px;
+        right: 10px;
+        background-color: white;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        z-index: 1000;
+    }
+    .dropdown-menu a {
+        color: black;
+        padding: 10px 15px;
+        text-decoration: none;
+        display: block;
+    }
+    .dropdown-menu a:hover {
+        background-color: #ddd;
+    }
+   
+</style>
+</head>
+<body>
+    <nav>
+      <ul>
+        <li><a href="Home.html">Home</a></li>
+        <li><a href="About.html">About</a></li>
+        <li><a href="Services1.html">Services</a></li>
+        <li><a href="RegisterationPage.html">Register</a></li>
+        <li><a href="LoginPage.html">Login</a></li>
+        <li><a href="Contactus.html">Contact</a></li>
+    </ul>
+    </nav>
+    <br><br><br><br><br><br><br><br><br>
+<h1>Login Form</h1>
+<h2>
+<nav>
+<ul>
+<li><a href="LoginPagestudent.html">Traveller Login </a></li>
+ <br>
+ <br>
+<li><a href="LoginPageadmin.html">Company Login </a></li> <br>
+<br>
+<br>
+<li>Don't have an account?<a href="RegisterationPage.html"> Sign Up</a> </li>
+</ul>
+</nav>
+</h2>
+<script>
+   function toggleDropdown() {
+            var dropdownMenu = document.getElementById('dropdownMenu');
+            if (dropdownMenu.style.display === 'block') {
+                dropdownMenu.style.display = 'none';
+            } else {
+                dropdownMenu.style.display = 'block';
+            }
+        }
+
+        window.onclick = function(event) {
+            if (!event.target.matches('.profile-image')) {
+                var dropdownMenu = document.getElementById('dropdownMenu');
+                if (dropdownMenu.style.display === 'block') {
+                    dropdownMenu.style.display = 'none';
+                }
+            }
+        }
+</script>
+</body>
+</html>

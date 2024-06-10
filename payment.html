@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Page</title>
+    <style>
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+}
+
+#backgroundVideo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.form-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.1);
+}
+
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+input[type="text"],
+input[type="month"],
+select {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background: green;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: green;
+}
+
+    </style>
+</head>
+<body>
+    <video autoplay muted loop id="backgroundVideo">
+        <source src="Video4.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div class="form-container">
+        <form id="paymentForm">
+            <h2>Payment Details</h2>
+
+            <label for="paymentType">Payment Type:</label>
+            <select id="paymentType" name="paymentType">
+                <option value="credit">Credit Card</option>
+                <option value="debit">Debit Card</option>
+                <option value="upi">UPI</option>
+            </select>
+            
+            <div id="cardDetails" style="display: none;">
+                <label for="cardNumber">Card Number:</label>
+                <input type="text" id="cardNumber" name="cardNumber" placeholder="Enter Card Number">
+                
+                <label for="expiryDate">Expiry Date:</label>
+                <input type="month" id="expiryDate" name="expiryDate">
+                
+                <label for="cvv">CVV:</label>
+                <input type="text" id="cvv" name="cvv" placeholder="Enter CVV">
+            </div>
+            
+            <div id="upiDetails" style="display: none;">
+                <label for="upi">UPI ID:</label>
+                <input type="text" id="upi" name="upi" placeholder="Enter UPI ID">
+            </div>
+            
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('paymentType').addEventListener('change', function() {
+            var paymentType = this.value;
+            if (paymentType === 'credit' || paymentType === 'debit') {
+                document.getElementById('cardDetails').style.display = 'block';
+                document.getElementById('upiDetails').style.display = 'none';
+            } else if (paymentType === 'upi') {
+                document.getElementById('cardDetails').style.display = 'none';
+                document.getElementById('upiDetails').style.display = 'block';
+            } else {
+                document.getElementById('cardDetails').style.display = 'none';
+                document.getElementById('upiDetails').style.display = 'none';
+            }
+        });
+
+        document.getElementById('paymentForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            var paymentType = document.getElementById('paymentType').value;
+            var cardNumber = document.getElementById('cardNumber').value;
+            var expiryDate = document.getElementById('expiryDate').value;
+            var cvv = document.getElementById('cvv').value;
+            var upi = document.getElementById('upi').value;
+
+            if (paymentType === 'credit' || paymentType === 'debit') {
+                if (!cardNumber || !expiryDate || !cvv) {
+                    alert('Please fill in all required card details.');
+                    return false;
+                }
+            } else if (paymentType === 'upi') {
+                if (!upi) {
+                    alert('Please fill in the UPI ID.');
+                    return false;
+                }
+            }
+
+            // Ideally, you would send these details to a backend server that processes the payment securely
+            window.location.href = 'Contactus.html';
+        });
+    </script>
+</body>
+</html>

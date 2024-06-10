@@ -1,0 +1,65 @@
+<html>
+<head>
+<title>UI Pages</title>
+<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    </head>
+    <style>
+    body{
+        background-image: url("loginstudentandadmin1.jpg");
+    }
+    .glass-card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+}
+
+.glass-card h2 {
+    margin-bottom: 20px;
+    color: #fff;
+}
+h1{
+    font-size: xx-large;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+    </style>
+    <script>
+    function loginValidation() {
+    var uname = document.myform.number.value;
+            if(uname<6) {
+              alert("Please enter correct OTP")
+              return false;  
+           }
+           else if(uname=="" || uname==null){
+            alert("OTP can't be Blank")
+            return false;
+           }
+           return true                 
+        }           
+     </script>
+    <body>
+        <br><br><br><br>
+        <center>
+        <div class="glass-card">
+            <form name="myform" action="LoginPageadminotp.html" onsubmit="return loginValidation(this)">
+                <h1>OTP</h1>
+        <div class="input-group">
+                <input  id="number" type="text" class="form-control" name="number" placeholder="OTP..."><br>
+        </div>
+        </div>
+        <br>
+<input type="submit" value="Submit"><br>
+</div>
+</form>
+</center>
+    </body>
+    </html>

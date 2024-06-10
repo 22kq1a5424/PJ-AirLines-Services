@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Page</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .container {
+        max-width: 800px;
+        margin: auto;
+        padding: 20px;
+        background-color: #fff;
+    }
+    
+    nav ul {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        justify-content: space-around;
+        background-color: #f39c12;
+    }
+    
+    nav ul li {
+        display: inline;
+    }
+    
+    nav ul li a {
+        color: #fff;
+        text-decoration: none;
+        padding: 10px 20px;
+        display: block;
+    }
+    
+    nav ul li a:hover {
+        background-color: #e67e22;
+    }
+    
+    .profile-header {
+        text-align: center;
+        padding: 20px;
+        background-color: #f39c12;
+        color: #fff;
+    }
+    
+    .profile-header .avatar {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        display: block;
+        margin: 0 auto 10px;
+    }
+    
+    .main-content {
+        display: flex;
+        justify-content: space-between;
+        padding: 20px;
+    }
+    
+    .bio, .projects {
+        width: 45%;
+    }
+    
+    .bio h2 {
+        background-color: #f39c12;
+        color: #fff;
+        padding: 10px;
+    }
+    
+    .project {
+        background-color: #ecf0f1;
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+    
+    .project h3 {
+        margin: 0;
+        padding-bottom: 5px;
+        border-bottom: 1px solid #bdc3c7;
+    }
+    
+    .project p {
+        margin: 5px 0;
+    }
+</style>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <ul>
+                <li><a href="#">Profile</a></li>
+            </ul>
+        </nav>
+        <div class="profile-header">
+            <img src="profile.jpg" class="avatar">
+            <h1>JayaLakshmi Pathi</h1>
+            <p>abc@email.com</p>
+        </div>
+        <div class="main-content">
+            <div class="bio">
+                <h2>Bio Graph</h2>
+                <p><strong>First Name:</strong> JayaLakshmi</p>
+                <p><strong>Last Name:</strong> Pathi</p>
+                <p><strong>Country:</strong> India</p>
+                <p><strong>Birthday:</strong> 01 Jan 2020</p>
+                <p><strong>Email:</strong> abc@gmail.com</p>
+                <p><strong>Mobile:</strong> (12) 03 4567890</p>
+                <p><strong>Phone:</strong> 88 (02) 123456</p>
+            </div>
+            <div class="projects">
+                <h1>Upcoming Bookings</h1>
+                <div class="project">
+                    <h3>Trip 1</h3>
+                    <p>Started: 15 July</p>
+                    <p>Time : 2:00</p>
+                    <p>Class: Premium </p>
+                </div>
+                <div class="project">
+                    <h3>Trip 2</h3>
+                    <p>Started: 20 June</p>
+                    <p>Time : 7:30</p>
+                    <p>Class: Business </p>
+                </div>
+                <div class="project">
+                    <h3>Trip 3</h3>
+                    <p>Started: 29 June</p>
+                    <p>Time : 21:45</p>
+                    <p>Class: Economy </p>
+                </div>
+                <div class="project">
+                    <h3>Trip 4</h3>
+                    <p>Started: 14 July</p>
+                    <p>Time : 11:56</p>
+                    <p>Class: Premium </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
